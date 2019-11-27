@@ -18,14 +18,11 @@ export default () => {
     <Layout>
       <SEO
         title="Home"
-        description="At Chika Mba Consulting Inc., knowledge fuels strategy and knowledge is power. 
-        Our industry-leading expertise & customer-centric approach is what makes us easier to do business with. 
-        We help you evolve and make informed decisions with technology. 
-        We will ensure dexterity and scalability for future technological advances."
+        description="At Chika Mba Consulting Inc., our industry-leading expertise and customer-centric approach is what makes us easier to do business with."
       />
       <Segment basic style={{ paddingTop: "5.5em" }} vertical>
         <Container>
-          <Header as="h1" style={{ fontSize: "3em", color: "#084166" }}>
+          <Header as="h1" style={{ fontSize: "2.8em", color: "#084166" }}>
             Solutions & Services Focused to Meet Your Needs
           </Header>
           <p style={{ fontSize: "1.33em", margin: "1em 0em 2em 0em" }}>
@@ -41,12 +38,16 @@ export default () => {
         </Container>
       </Segment>
 
-      <Segment textAlign="center" vertical style={{ paddingBottom: "5em" }}>
+      <Segment textAlign="center" vertical style={{ paddingBottom: "4em" }}>
         <Divider
-          as="h1"
+          as="h2"
           className="header"
           horizontal
-          style={{ paddingBottom: "1.5em", paddingTop: "1em" }}
+          style={{
+            paddingTop: "1em",
+            paddingBottom: "1em",
+            fontSize: "2em",
+          }}
         >
           <Header
             style={{
@@ -56,54 +57,80 @@ export default () => {
             Why Choose Us?
           </Header>
         </Divider>
-        <Grid celled="internally" columns="equal" stackable>
-          <Grid.Row textAlign="center">
-            <Grid.Column style={{ paddingBottom: "4em" }}>
+        <Grid
+          celled="internally"
+          columns="equal"
+          stackable
+          verticalAlign="middle"
+        >
+          <Grid.Column>
+            <Container style={gridStyle}>
               <Icon
                 inverted
                 circular
                 color="blue"
                 name="dollar sign"
                 size="large"
+                style={{ fontSize: "1.3em" }}
               />
-              <Header as="h3" style={{ fontSize: "2em", color: "#084166" }}>
+              <Header as="h3" style={{ fontSize: "1.5em", color: "#084166" }}>
                 Competitive Pricing
               </Header>
-              <p style={{ fontSize: "1.33em" }}>
+              <p>
                 With our direct sourcing capabilities, we're able to provide you
                 with the best of both, pricing & service!
               </p>
-            </Grid.Column>
-            <Grid.Column style={{ paddingBottom: "5em" }}>
-              <Icon inverted circular color="blue" name="list" size="large" />
-              <Header as="h3" style={{ fontSize: "2em", color: "#084166" }}>
+            </Container>
+          </Grid.Column>
+          <Grid.Column>
+            <Container style={gridStyle}>
+              <Icon
+                inverted
+                circular
+                color="blue"
+                name="list"
+                size="large"
+                style={{ fontSize: "1.3em" }}
+              />
+              <Header as="h3" style={{ fontSize: "1.5em", color: "#084166" }}>
                 Great Selection
               </Header>
-              <p style={{ fontSize: "1.33em" }}>
+              <p>
                 With our expanded line of products, we're able to provide you
                 with a one-stop shop for all your needs.
               </p>
-            </Grid.Column>
+            </Container>
+          </Grid.Column>
 
-            <Grid.Column style={{ paddingBottom: "5em" }}>
+          <Grid.Column>
+            <Container style={gridStyle}>
               <Icon
                 inverted
                 circular
                 color="blue"
                 name="add user"
                 size="large"
+                style={{ fontSize: "1.3em" }}
               />
-              <Header as="h3" style={{ fontSize: "2em", color: "#084166" }}>
+              <Header as="h3" style={{ fontSize: "1.5em", color: "#084166" }}>
                 Expert Advice
               </Header>
-              <p style={{ fontSize: "1.33em" }}>
+              <p>
                 If you have a question, we'll get you the answer quick & easy.
                 Live Chat, Email & Telephone.
               </p>
-            </Grid.Column>
-          </Grid.Row>
+            </Container>
+          </Grid.Column>
         </Grid>
       </Segment>
     </Layout>
   )
+}
+
+const gridStyle = {
+  fontSize: "1.33em",
+  width: "27em",
+  margin: "0 auto",
+  paddingTop: "1.2em",
+  paddingBottom: "2.7em",
 }

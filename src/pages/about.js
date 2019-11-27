@@ -20,7 +20,9 @@ export default () => {
           backgroundColor: "#2d5d7d",
         }}
       >
-        <Header style={{ fontSize: "3.5em" }}>About the Company</Header>
+        <Header as="h1" style={{ fontSize: "3.5em" }}>
+          About the Company
+        </Header>
       </Segment>
       <Segment
         vertical
