@@ -3,7 +3,8 @@ module.exports = {
     title: `Chika Mba Consulting Inc`,
     description: `Where technology meets innovation`,
     url: "https://www.cmbaconsulting.ca",
-    image: "/images/image2.png",
+    image: `/images/logo.png`,
+    imageAlt: "Chika Mba Consulting Inc",
   },
   plugins: [
     `gatsby-plugin-less`,

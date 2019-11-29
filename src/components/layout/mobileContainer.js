@@ -12,7 +12,7 @@ import {
 } from "semantic-ui-react"
 import _ from "lodash"
 import { navigate } from "@reach/router"
-import Footer from "./footer"
+import Footer from "./mobileFooter"
 
 const DesktopContainer = props => {
   const [fixed, showFixedMenu] = useState(false)
@@ -20,7 +20,16 @@ const DesktopContainer = props => {
   const { children, getWidth, items } = props
 
   return (
-    <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
+    <Responsive getWidth={getWidth} maxWidth={Responsive.onlyMobile.maxWidth}>
+      <Segment vertical basic style={{ padding: 20 }}>
+        <Image
+          src="./images/logo.png"
+          onClick={() => navigate("/")}
+          style={{ cursor: "pointer" }}
+          size="large"
+          alt="Chika Mba Consulting Inc"
+        />
+      </Segment>
       <Visibility
         once={false}
         onTopPassed={() => {
@@ -30,41 +39,39 @@ const DesktopContainer = props => {
           showFixedMenu(false)
         }}
       >
-        <Menu
-          style={{ backgroundColor: "white", opacity: 0.95 }}
-          fixed="top"
-          size="massive"
-          borderless
-          text
+        <Segment
+          vertical
+          inverted
+          basic
+          style={{ padding: 0, backgroundColor: "#084166" }}
         >
-          <Menu.Header style={{ padding: 20 }}>
-            <Image
-              src="./images/logo.png"
-              onClick={() => navigate("/")}
-              style={{ cursor: "pointer", width: 325 }}
-              size="medium"
-              alt="Chika Mba Consulting Inc"
-            />
-          </Menu.Header>
-          <Container>
-            {_.map(items, item => (
-              <Menu.Item
-                position={item.key === "home" ? "right" : null}
-                as={Link}
-                style={{
-                  paddingLeft: 50,
-                  paddingRight: 50,
-                  fontSize: "1.1em",
-                }}
-                activeStyle={{ color: "#042337", fontWeight: "bold" }}
-                {...item}
-              />
-            ))}
-          </Container>
-        </Menu>
+          <Menu
+            fixed={fixed ? "top" : null}
+            inverted
+            borderless
+            size="massive"
+            widths={3}
+            style={{ backgroundColor: "#084166" }}
+          >
+            <Container>
+              {_.map(items, item => (
+                <Menu.Item
+                  as={Link}
+                  style={{
+                    paddingBottom: 16.571,
+                    paddingLeft: 50,
+                    paddingRight: 50,
+                  }}
+                  activeStyle={{ backgroundColor: "#2d5d7d" }}
+                  {...item}
+                />
+              ))}
+            </Container>
+          </Menu>
+        </Segment>
       </Visibility>
       {/* Sidebar Component */}
-      <Sidebar.Pushable style={{ minHeight: 641, marginTop: 146.25 }}>
+      <Sidebar.Pushable style={{ minHeight: 641, marginTop: fixed ? 50 : 0 }}>
         {/* <Sidebar
           as={Menu}
           animation="overlay"
@@ -86,7 +93,7 @@ const DesktopContainer = props => {
             />
           ))}
         </Sidebar> */}
-        <Sidebar.Pusher style={{ paddingBottom: "30em" }}>
+        <Sidebar.Pusher style={{ paddingBottom: "3em" }}>
           {children}
         </Sidebar.Pusher>
       </Sidebar.Pushable>

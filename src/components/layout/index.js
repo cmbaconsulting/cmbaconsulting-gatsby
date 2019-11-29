@@ -1,9 +1,8 @@
 import React, { Component } from "react"
 import { Responsive } from "semantic-ui-react"
 import DesktopContainer from "./desktopContainer"
-//import MobileContainer from "./mobileContainer";
+import MobileContainer from "./mobileContainer"
 import PropTypes from "prop-types"
-import Footer from "./footer"
 
 let items = [
   {
@@ -47,10 +46,9 @@ class ResponsiveContainer extends Component {
     }
 
     return (
-      <div>
+      <div style={{ position: "relative", minHeight: "100vh" }}>
         <DesktopContainer {...containerProps}>{children}</DesktopContainer>
-        {/* <MobileContainer {...containerProps}>{children}</MobileContainer> */}
-        <Footer />
+        <MobileContainer {...containerProps}>{children}</MobileContainer>
       </div>
     )
   }
