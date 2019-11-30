@@ -15,14 +15,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export default () => {
-  const [visible, toggleVisbility] = useState(false)
-
-  useEffect(() => {
-    toggleVisbility(true)
-    return () => {
-      toggleVisbility(false)
-    }
-  }, [])
   return (
     <Layout>
       <SEO
@@ -31,11 +23,11 @@ export default () => {
       />
       <Transition
         mountOnShow={false}
-        visible={visible}
+        transitionOnMount
         animation="fade up"
         duration={1000}
       >
-        <Segment basic style={{ paddingTop: "4em" }} vertical>
+        <Segment basic vertical>
           <Container>
             <Header as="h1" style={{ fontSize: "2.8em", color: "#084166" }}>
               Solutions & Services Focused to Meet Your Needs
@@ -56,7 +48,7 @@ export default () => {
       </Transition>
       <Transition
         mountOnShow={false}
-        visible={visible}
+        transitionOnMount
         animation="fade up"
         duration={1000}
       >

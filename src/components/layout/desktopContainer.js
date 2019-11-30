@@ -12,10 +12,11 @@ import {
 } from "semantic-ui-react"
 import _ from "lodash"
 import { navigate } from "@reach/router"
+import logo from "../../images/logo.png"
 import Footer from "./footer"
 
 const DesktopContainer = props => {
-  const [fixed, showFixedMenu] = useState(false)
+  const [topPassed, topPassedToggle] = useState(false)
 
   const { children, getWidth, items } = props
 
@@ -24,29 +25,37 @@ const DesktopContainer = props => {
       <Visibility
         once={false}
         onTopPassed={() => {
-          showFixedMenu(true)
+          topPassedToggle(true)
         }}
         onTopPassedReverse={() => {
-          showFixedMenu(false)
+          topPassedToggle(false)
         }}
+        offset={[100, 0]}
       >
         <Menu
-          style={{ backgroundColor: "white", opacity: 0.95 }}
+          style={{
+            backgroundColor: "white",
+            transition: "all .3s ease-in-out",
+          }}
           fixed="top"
           size="massive"
           borderless
-          text
+          pointing
         >
-          <Menu.Header style={{ padding: 20 }}>
-            <Image
-              src="./images/logo.png"
-              onClick={() => navigate("/")}
-              style={{ cursor: "pointer", width: 325 }}
-              size="medium"
-              alt="Chika Mba Consulting Inc"
-            />
-          </Menu.Header>
           <Container>
+            <Menu.Header style={{ padding: "1.5% 0%" }}>
+              <Image
+                src={logo}
+                onClick={() => navigate("/")}
+                style={{
+                  cursor: "pointer",
+                  transition: "all .3s ease-in-out",
+                  height: topPassed ? 100 : 133,
+                }}
+                alt="Chika Mba Consulting Inc"
+              />
+            </Menu.Header>
+
             {_.map(items, item => (
               <Menu.Item
                 position={item.key === "home" ? "right" : null}
@@ -54,18 +63,29 @@ const DesktopContainer = props => {
                 style={{
                   paddingLeft: 50,
                   paddingRight: 50,
-                  fontSize: "1.1em",
+                  fontSize: "1.07em",
+                  backgroundColor: "white",
+                  fontWeight: "bold",
+                  opacity: 0.6,
                 }}
-                activeStyle={{ color: "#042337", fontWeight: "bold" }}
+                activeStyle={{
+                  color: "#042337",
+                  opacity: 1,
+                }}
                 {...item}
               />
             ))}
           </Container>
         </Menu>
-      </Visibility>
-      {/* Sidebar Component */}
-      <Sidebar.Pushable style={{ minHeight: 641, marginTop: 146.25 }}>
-        {/* <Sidebar
+
+        {/* Sidebar Component */}
+        <Sidebar.Pushable
+          style={{
+            minHeight: 641,
+            marginTop: 135.26,
+          }}
+        >
+          {/* <Sidebar
           as={Menu}
           animation="overlay"
           color="blue"
@@ -86,10 +106,16 @@ const DesktopContainer = props => {
             />
           ))}
         </Sidebar> */}
-        <Sidebar.Pusher style={{ paddingBottom: "30em" }}>
-          {children}
-        </Sidebar.Pusher>
-      </Sidebar.Pushable>
+          <Sidebar.Pusher
+            style={{
+              paddingBottom: "33em",
+              paddingTop: "6em",
+            }}
+          >
+            {children}
+          </Sidebar.Pusher>
+        </Sidebar.Pushable>
+      </Visibility>
       <Footer />
     </Responsive>
   )

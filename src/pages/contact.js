@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import axios from "axios"
 import creds from "../config"
 import "semantic-ui-css/semantic.min.css"
@@ -12,14 +12,6 @@ export default props => {
   const [email, changeEmail] = useState("")
   const [message, changeMessage] = useState("")
   const [loading, setLoading] = useState(false)
-  const [visible, toggleVisbility] = useState(false)
-
-  useEffect(() => {
-    toggleVisbility(true)
-    return () => {
-      toggleVisbility(false)
-    }
-  }, [])
 
   const resetForm = () => {
     changeName("")
@@ -69,17 +61,15 @@ export default props => {
         <Segment
           vertical
           basic
-          padded
           style={{
-            paddingTop: "4em",
             width: "55em",
           }}
         >
           <Transition
             mountOnShow={false}
-            visible={visible}
             animation="fade up"
             duration={1500}
+            transitionOnMount
           >
             <Header
               as="h1"
@@ -94,7 +84,7 @@ export default props => {
           </Transition>
           <Transition
             mountOnShow={false}
-            visible={visible}
+            transitionOnMount
             animation="fade up"
             duration={1000}
           >
@@ -102,7 +92,7 @@ export default props => {
               size="huge"
               id="contact-form"
               onSubmit={handleSubmit}
-              style={{ padding: "1em 1em 3em 1em" }}
+              style={{ padding: "2em 1em 0em 1em" }}
             >
               <Form.Input
                 type="text"

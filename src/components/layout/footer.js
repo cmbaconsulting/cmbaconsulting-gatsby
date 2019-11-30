@@ -56,9 +56,15 @@ export default () => {
             </Grid.Row>
             <Grid.Row stlye={{ padding: 0 }}>
               <Grid.Column>
-                <Icon disabled name="copyright outline">
+                <Segment
+                  disabled
+                  basic
+                  vertical
+                  style={{ padding: 0, color: "white" }}
+                >
+                  <Icon name="copyright outline"></Icon>
                   2019
-                </Icon>
+                </Segment>
               </Grid.Column>
             </Grid.Row>
           </Grid>

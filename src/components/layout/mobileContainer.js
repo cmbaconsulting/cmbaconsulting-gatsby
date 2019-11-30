@@ -12,6 +12,7 @@ import {
 } from "semantic-ui-react"
 import _ from "lodash"
 import { navigate } from "@reach/router"
+import logo from "../../images/logo.png"
 import Footer from "./mobileFooter"
 
 const DesktopContainer = props => {
@@ -23,10 +24,11 @@ const DesktopContainer = props => {
     <Responsive getWidth={getWidth} maxWidth={Responsive.onlyMobile.maxWidth}>
       <Segment vertical basic style={{ padding: 20 }}>
         <Image
-          src="./images/logo.png"
+          src={logo}
           onClick={() => navigate("/")}
           style={{ cursor: "pointer" }}
           size="large"
+          centered
           alt="Chika Mba Consulting Inc"
         />
       </Segment>
@@ -93,7 +95,7 @@ const DesktopContainer = props => {
             />
           ))}
         </Sidebar> */}
-        <Sidebar.Pusher style={{ paddingBottom: "3em" }}>
+        <Sidebar.Pusher style={{ paddingBottom: "3em", paddingTop: "4em" }}>
           {children}
         </Sidebar.Pusher>
       </Sidebar.Pushable>
