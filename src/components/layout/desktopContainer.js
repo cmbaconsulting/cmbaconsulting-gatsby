@@ -16,18 +16,19 @@ const StyledLogo = styled.img`
 `
 
 const StyledMenu = styled(Menu)`
-  &&& > div.menuItems > a {
+  &&& a {
     padding-left: 20px;
     padding-right: 20px;
-    margin: 30px 30px 30px 30px
-    font-size: 1.07em;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 1.05em;
     font-weight: bold;
-    opacity: 0.66
+    opacity: 0.66;
   }
   &&& > div.menuItems > a:hover {
     background-color: white;
-    color: #084166
-    opacity: 1
+    color: #084166;
+    opacity: 1;
   }
 `
 
