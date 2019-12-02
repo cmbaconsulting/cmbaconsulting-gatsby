@@ -3,39 +3,41 @@ import "semantic-ui-css/semantic.min.css"
 import Layout from "../components/layout"
 import { Segment, Container, Header, List, Transition } from "semantic-ui-react"
 import SEO from "../components/seo"
+import styled from "styled-components"
+
+const StyledSegment = styled(Segment)`
+  &&&& {
+    padding: 7em 0em 3.5em 0em;
+    margin: -6em 0em 3em 0em;
+    color: #084166;
+    text-align: center;
+  }
+  & h1 {
+    font-size: 3.6em;
+  }
+`
+
+const StyledList = styled(List)`
+  &&& {
+    color: #042337;
+  }
+`
 
 export default () => {
   return (
     <Layout>
       <SEO title="About" url="/about" description="About the Company" />
 
-      <Segment
-        textAlign="center"
-        style={{
-          padding: "7em 0em 3.5em 0em", // Displacing due to menu transformation
-          margin: "-6em auto 0em auto",
-        }}
-        stacked
-        secondary
-      >
+      <StyledSegment textAlign="center" secondary>
         <Transition
           mountOnShow={false}
           transitionOnMount
           animation="fade up"
           duration={1000}
         >
-          <Header
-            as="h1"
-            style={{
-              fontSize: "4em",
-              color: "#084166",
-              textAlign: "center",
-            }}
-          >
-            About the Company
-          </Header>
+          <h1>About the Company</h1>
         </Transition>
-      </Segment>
+      </StyledSegment>
 
       <Transition
         mountOnShow={false}
@@ -43,16 +45,9 @@ export default () => {
         animation="fade up"
         duration={1000}
       >
-        <Segment
-          vertical
-          basic
-          padded
-          style={{
-            paddingTop: "4em",
-          }}
-        >
+        <Segment vertical basic padded>
           <Container>
-            <List bulleted divided size="massive" style={{ color: "#042337" }}>
+            <StyledList bulleted divided size="massive">
               <List.Item>
                 We have been in business since 2005. We are bonded and insured.
               </List.Item>
@@ -83,7 +78,7 @@ export default () => {
                 We also offer Cyber Security, Scalability Assessments, IT
                 Compliance, Integration Services, and Assessment & Planning.
               </List.Item>
-            </List>
+            </StyledList>
           </Container>
         </Segment>
       </Transition>

@@ -1,19 +1,41 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import {
-  Container,
-  Menu,
-  Segment,
-  Sidebar,
-  Responsive,
-  Image,
-  Visibility,
-} from "semantic-ui-react"
+import { Container, Menu, Responsive, Visibility } from "semantic-ui-react"
 import _ from "lodash"
 import { navigate } from "@reach/router"
 import logo from "../../images/logo.png"
 import Footer from "./footer"
+import styled from "styled-components"
+
+const StyledLogo = styled.img`
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: ${props => (props.topPassed ? "260px" : "330px")};
+  padding: 1.5% 0%;
+`
+
+const StyledMenu = styled(Menu)`
+  &&& > div.menuItems > a {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 30px 30px 30px 30px
+    font-size: 1.07em;
+    font-weight: bold;
+    opacity: 0.66
+  }
+  &&& > div.menuItems > a:hover {
+    background-color: white;
+    color: #084166
+    opacity: 1
+  }
+`
+
+const Body = styled.div`
+  margin-top: 4.5em;
+  padding-bottom: 33em;
+  padding-top: 7.5em;
+`
 
 const DesktopContainer = props => {
   const [topPassed, topPassedToggle] = useState(false)
@@ -30,29 +52,16 @@ const DesktopContainer = props => {
         onTopPassedReverse={() => {
           topPassedToggle(false)
         }}
-        offset={[100, 0]}
+        offset={[60, 0]}
       >
-        <Menu
-          style={{
-            backgroundColor: "white",
-            transition: "all .3s ease-in-out",
-          }}
-          fixed="top"
-          size="massive"
-          borderless
-          pointing
-        >
-          <Container>
-            <Menu.Header style={{ padding: "1.5% 0%" }}>
-              <Image
+        <StyledMenu fixed="top" size="huge" borderless pointing>
+          <Container className="menuItems">
+            <Menu.Header>
+              <StyledLogo
                 src={logo}
                 onClick={() => navigate("/")}
-                style={{
-                  cursor: "pointer",
-                  transition: "all .3s ease-in-out",
-                  height: topPassed ? 100 : 133,
-                }}
                 alt="Chika Mba Consulting Inc"
+                topPassed={topPassed}
               />
             </Menu.Header>
 
@@ -60,32 +69,23 @@ const DesktopContainer = props => {
               <Menu.Item
                 position={item.key === "home" ? "right" : null}
                 as={Link}
-                style={{
-                  paddingLeft: 50,
-                  paddingRight: 50,
-                  fontSize: "1.07em",
-                  backgroundColor: "white",
-                  fontWeight: "bold",
-                  opacity: 0.6,
-                }}
                 activeStyle={{
-                  color: "#042337",
+                  color: "#084166",
                   opacity: 1,
                 }}
                 {...item}
               />
             ))}
           </Container>
-        </Menu>
-
-        {/* Sidebar Component */}
+        </StyledMenu>
+        <Body>{children}</Body>
+        {/*
         <Sidebar.Pushable
           style={{
-            minHeight: 641,
-            marginTop: 135.26,
+            marginTop: 70,
           }}
         >
-          {/* <Sidebar
+          <Sidebar
           as={Menu}
           animation="overlay"
           color="blue"
@@ -105,16 +105,16 @@ const DesktopContainer = props => {
               {...item}
             />
           ))}
-        </Sidebar> */}
+        </Sidebar>
           <Sidebar.Pusher
             style={{
               paddingBottom: "33em",
-              paddingTop: "6em",
+              paddingTop: "7.5em",
             }}
           >
             {children}
           </Sidebar.Pusher>
-        </Sidebar.Pushable>
+        </Sidebar.Pushable> */}
       </Visibility>
       <Footer />
     </Responsive>

@@ -46,7 +46,12 @@ class ResponsiveContainer extends Component {
     }
 
     return (
-      <div style={{ position: "relative", minHeight: "100vh" }}>
+      <div
+        style={{
+          position: "relative",
+          minHeight: "100vh",
+        }}
+      >
         <DesktopContainer {...containerProps}>{children}</DesktopContainer>
         <MobileContainer {...containerProps}>{children}</MobileContainer>
       </div>

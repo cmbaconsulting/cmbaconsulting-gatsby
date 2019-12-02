@@ -35,7 +35,7 @@ export default () => {
           >
             <Grid.Row style={{ padding: 0 }}>
               <Grid.Column>
-                <List divided horizontal inverted link size="big">
+                <List divided horizontal inverted link size="large">
                   {/* <List.Item>
                   <Icon as={Image} src={icon} size="mini" />
                 </List.Item> */}

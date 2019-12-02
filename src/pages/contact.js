@@ -7,7 +7,7 @@ import { navigate } from "@reach/router"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-export default props => {
+export default () => {
   const [name, changeName] = useState("")
   const [email, changeEmail] = useState("")
   const [message, changeMessage] = useState("")
@@ -74,7 +74,7 @@ export default props => {
             <Header
               as="h1"
               style={{
-                fontSize: "4em",
+                fontSize: "3.6em",
                 color: "#084166",
                 textAlign: "center",
               }}

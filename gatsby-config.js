@@ -5,6 +5,7 @@ module.exports = {
     url: "https://www.cmbaconsulting.ca",
     image: `/images/logo.png`,
     imageAlt: "Chika Mba Consulting Inc",
+    siteUrl: `https://www.cmbaconsulting.ca`,
   },
   plugins: [
     `gatsby-plugin-less`,
@@ -34,5 +35,7 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-styled-components`,
   ],
 }

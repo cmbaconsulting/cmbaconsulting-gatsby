@@ -37,7 +37,7 @@ export default () => {
           <Header
             textAlign="center"
             as="h3"
-            style={{ fontSize: "1.5em", color: "#084166", fontWeight: "bold" }}
+            style={{ fontSize: "1.4em", color: "#084166", fontWeight: "bold" }}
           >
             Subscribe to our newsletter
           </Header>
@@ -46,7 +46,7 @@ export default () => {
             action={{ content: "OK", color: "blue" }}
             placeholder="Email Address"
             size="big"
-            style={{ width: "22em", fontSize: "1.3em" }}
+            style={{ width: "22em", fontSize: "1.2em" }}
           />
         </Segment>
       </div>

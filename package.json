@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Alex Teshome",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.18.4",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-less": "^3.0.14",
@@ -13,6 +14,8 @@
     "gatsby-plugin-offline": "^3.0.24",
     "gatsby-plugin-react-helmet": "^3.1.14",
     "gatsby-plugin-sharp": "^2.3.4",
+    "gatsby-plugin-sitemap": "^2.2.22",
+    "gatsby-plugin-styled-components": "^3.1.14",
     "gatsby-source-filesystem": "^2.1.36",
     "gatsby-transformer-sharp": "^2.3.6",
     "prop-types": "^15.7.2",
@@ -21,7 +24,8 @@
     "react-helmet": "^5.2.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-less": "^2.4.1",
-    "semantic-ui-react": "^0.88.1"
+    "semantic-ui-react": "^0.88.1",
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^16.11.0",
