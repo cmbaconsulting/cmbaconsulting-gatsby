@@ -65,7 +65,12 @@ function SEO({ description, lang, meta, title, image, imageAlt, pathname }) {
             "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
         },
       ].concat(meta)}
-    />
+    >
+      <link
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+        rel="stylesheet"
+      />
+    </Helmet>
   )
 }
 

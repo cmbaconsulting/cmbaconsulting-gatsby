@@ -19,7 +19,7 @@ const StyledSegment = styled(Segment)`
 
 const StyledList = styled(List)`
   &&& {
-    color: #042337;
+    color: #084166;
   }
 `
 

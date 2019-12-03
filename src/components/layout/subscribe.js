@@ -37,7 +37,12 @@ export default () => {
           <Header
             textAlign="center"
             as="h3"
-            style={{ fontSize: "1.4em", color: "#084166", fontWeight: "bold" }}
+            style={{
+              fontSize: "1.4em",
+              color: "#084166",
+              fontWeight: "bold",
+              fontFamily: "Source Sans Pro",
+            }}
           >
             Subscribe to our newsletter
           </Header>

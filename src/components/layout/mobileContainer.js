@@ -63,6 +63,7 @@ const DesktopContainer = props => {
                     paddingBottom: 16.571,
                     paddingLeft: 50,
                     paddingRight: 50,
+                    fontFamily: "Source Sans Pro",
                   }}
                   activeStyle={{ backgroundColor: "#2d5d7d" }}
                   {...item}

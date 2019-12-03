@@ -3,6 +3,14 @@ import { Responsive } from "semantic-ui-react"
 import DesktopContainer from "./desktopContainer"
 import MobileContainer from "./mobileContainer"
 import PropTypes from "prop-types"
+import "./index.css"
+import styled from "styled-components"
+
+const GlobalStyle = styled.div`
+  &&&&& {
+    font-family: "Source Sans Pro";
+  }
+`
 
 let items = [
   {
@@ -52,8 +60,10 @@ class ResponsiveContainer extends Component {
           minHeight: "100vh",
         }}
       >
-        <DesktopContainer {...containerProps}>{children}</DesktopContainer>
-        <MobileContainer {...containerProps}>{children}</MobileContainer>
+        <GlobalStyle>
+          <DesktopContainer {...containerProps}>{children}</DesktopContainer>
+          <MobileContainer {...containerProps}>{children}</MobileContainer>
+        </GlobalStyle>
       </div>
     )
   }

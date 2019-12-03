@@ -37,6 +37,7 @@ const StyledDivider = styled(Divider)`
 const StyledParagraph = styled.p`
   font-size: 1.2em;
   padding-bottom: 1em;
+  font-family: "Source Sans Pro";
 `
 
 const StyledGridContainer = styled(Container)`
