@@ -8,10 +8,11 @@ import styled from "styled-components"
 const StyledSegment = styled(Segment)`
   &&&& {
     padding: 7em 0em 3.5em 0em;
-    margin: -6em 0em 3em 0em;
+    margin: -6em 0em 2em 0em;
     color: #084166;
     text-align: center;
   }
+
   & h1 {
     font-size: 3.6em;
   }
@@ -20,6 +21,10 @@ const StyledSegment = styled(Segment)`
 const StyledList = styled(List)`
   &&& {
     color: #084166;
+  }
+
+  &&&&& .item {
+    padding: 0.7em 0em;
   }
 `
 

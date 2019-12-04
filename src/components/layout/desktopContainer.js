@@ -5,7 +5,7 @@ import { Container, Menu, Responsive, Visibility } from "semantic-ui-react"
 import _ from "lodash"
 import { navigate } from "@reach/router"
 import logo from "../../images/logo.png"
-import Footer from "./footer"
+import Subscribe from "./subscribe"
 import styled from "styled-components"
 
 const StyledLogo = styled.img`
@@ -34,7 +34,7 @@ const StyledMenu = styled(Menu)`
 
 const Body = styled.div`
   margin-top: 4.5em;
-  padding-bottom: 33em;
+  padding-bottom: 8em;
   padding-top: 7.5em;
 `
 
@@ -117,7 +117,7 @@ const DesktopContainer = props => {
           </Sidebar.Pusher>
         </Sidebar.Pushable> */}
       </Visibility>
-      <Footer />
+      <Subscribe />
     </Responsive>
   )
 }

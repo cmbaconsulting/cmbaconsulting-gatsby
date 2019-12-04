@@ -3,12 +3,14 @@ import { Responsive } from "semantic-ui-react"
 import DesktopContainer from "./desktopContainer"
 import MobileContainer from "./mobileContainer"
 import PropTypes from "prop-types"
-import "./index.css"
 import styled from "styled-components"
+import Footer from "./footer"
 
 const GlobalStyle = styled.div`
   &&&&& {
     font-family: "Source Sans Pro";
+    position: relative;
+    min-height: 100vh;
   }
 `
 
@@ -54,16 +56,12 @@ class ResponsiveContainer extends Component {
     }
 
     return (
-      <div
-        style={{
-          position: "relative",
-          minHeight: "100vh",
-        }}
-      >
+      <div>
         <GlobalStyle>
           <DesktopContainer {...containerProps}>{children}</DesktopContainer>
           <MobileContainer {...containerProps}>{children}</MobileContainer>
         </GlobalStyle>
+        <Footer getWidth={containerProps.getWidth} />
       </div>
     )
   }

@@ -1,76 +1,85 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Segment, Container, Grid, List, Icon } from "semantic-ui-react"
-import Subscribe from "./subscribe"
+import {
+  Segment,
+  Container,
+  Grid,
+  List,
+  Icon,
+  Responsive,
+} from "semantic-ui-react"
 
-export default () => {
+export default props => {
   return (
-    <Container
-      fluid
-      style={{
-        position: "absolute",
-        bottom: 0,
-        width: "100%",
-      }}
+    <Responsive
+      getWidth={props.getWidth}
+      minWidth={Responsive.onlyTablet.minWidth}
     >
-      <Subscribe />
-      <Segment
-        inverted
-        vertical
-        textAlign="center"
+      <Container
+        fluid
         style={{
-          padding: "1em 0em 0em 0em",
-          backgroundColor: "#144b6e",
-          marginTop: "5em",
+          bottom: 0,
+          width: "100%",
         }}
       >
-        <Container>
-          <Grid
-            divided
-            inverted
-            stackable
-            verticalAlign="middle"
-            columns="equal"
-            padded
-          >
-            <Grid.Row style={{ padding: 0 }}>
-              <Grid.Column>
-                <List divided horizontal inverted link size="large">
-                  {/* <List.Item>
+        <Segment
+          inverted
+          vertical
+          textAlign="center"
+          style={{
+            padding: "1em 0em 0em 0em",
+            backgroundColor: "#144b6e",
+            marginTop: "5em",
+          }}
+        >
+          <Container>
+            <Grid
+              divided
+              inverted
+              stackable
+              verticalAlign="middle"
+              columns="equal"
+              padded
+            >
+              <Grid.Row style={{ padding: 0 }}>
+                <Grid.Column>
+                  <List divided horizontal inverted link size="large">
+                    {/* <List.Item>
                   <Icon as={Image} src={icon} size="mini" />
                 </List.Item> */}
-                  <List.Item as={Link} to="/about">
-                    About Us
-                  </List.Item>
-                  <List.Item as={Link} to="/contact">
-                    Contact Us
-                  </List.Item>
-                  <List.Item as="a" href="#">
-                    Terms & Conditions
-                  </List.Item>
-                  <List.Item as="a" href="#">
-                    Privacy Policy
-                  </List.Item>
-                </List>
-              </Grid.Column>
-            </Grid.Row>
-            <Grid.Row stlye={{ padding: 0 }}>
-              <Grid.Column>
-                <Segment
-                  disabled
-                  basic
-                  vertical
-                  style={{ padding: 0, color: "white" }}
-                >
-                  <Icon name="copyright outline"></Icon>
-                  2019
-                </Segment>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
-      </Segment>
-    </Container>
+                    <List.Item as={Link} to="/about">
+                      About Us
+                    </List.Item>
+                    <List.Item as={Link} to="/contact">
+                      Contact Us
+                    </List.Item>
+                    <List.Item as="a" href="#">
+                      Terms & Conditions
+                    </List.Item>
+                    <List.Item as="a" href="#">
+                      Privacy Policy
+                    </List.Item>
+                  </List>
+                </Grid.Column>
+              </Grid.Row>
+              <Grid.Row stlye={{ padding: 0 }}>
+                <Grid.Column>
+                  <Segment
+                    disabled
+                    basic
+                    vertical
+                    style={{ padding: 0, color: "white" }}
+                  >
+                    <Icon name="copyright outline"></Icon>
+                    2019
+                  </Segment>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Container>
+        </Segment>
+      </Container>
+    </Responsive>
   )
 }
 
