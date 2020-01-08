@@ -41,6 +41,21 @@ export default props => {
               columns="equal"
               padded
             >
+              <Grid.Row style={{ padding: 10 }}>
+                <Grid.Column>
+                  <List divided horizontal inverted size="large">
+                    <List.Item as="a" href="mailto:chika@cmbaconsulting.ca">
+                      chika@cmbaconsulting.ca
+                    </List.Item>
+                    <List.Item>
+                      314 Mykonos Crescent, Stittsville, Ontario, K2S0P1
+                    </List.Item>
+                    <List.Item as="a" href="tel:613-663-4768">
+                      (613) 663-4768
+                    </List.Item>
+                  </List>
+                </Grid.Column>
+              </Grid.Row>
               <Grid.Row style={{ padding: 0 }}>
                 <Grid.Column>
                   <List divided horizontal inverted link size="large">

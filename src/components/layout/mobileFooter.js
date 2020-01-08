@@ -38,6 +38,20 @@ export default () => {
               style={{ width: "20em", margin: "0 auto" }}
             />
           </Grid.Column>
+
+          <Grid.Column>
+            <List inverted size="large">
+              <List.Item as="a" href="mailto:chika@cmbaconsulting.ca">
+                chika@cmbaconsulting.ca
+              </List.Item>
+              <List.Item>
+                314 Mykonos Crescent, Stittsville, Ontario, K2S0P1
+              </List.Item>
+              <List.Item as="a" href="tel:613-663-4768">
+                (613) 663-4768
+              </List.Item>
+            </List>
+          </Grid.Column>
           <Grid.Column>
             <List link inverted size="large">
               <List.Item as={Link} to="/about" style={topListStyle}>
