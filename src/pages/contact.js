@@ -45,7 +45,11 @@ export default () => {
       })
       .catch(err => {
         console.log(err)
-        alert("Message failed to send:\n\n" + err.response.data.message)
+        alert(
+          "Message failed to send:\n\n" + err.response
+            ? err.response.data.message
+            : err
+        )
         setLoading(false)
       })
   }
