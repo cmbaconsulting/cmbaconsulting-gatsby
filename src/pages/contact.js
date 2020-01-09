@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import axios from "axios"
-import creds from "../config"
 import "semantic-ui-css/semantic.min.css"
 import { Form, Segment, Header, Container, Transition } from "semantic-ui-react"
 import { navigate } from "@reach/router"
@@ -25,7 +24,7 @@ export default () => {
     axios({
       method: "POST",
       url: "https://chika-mba-mailer.herokuapp.com/send",
-      data: { creds, name, email, message },
+      data: { name, email, message },
     })
       .then(response => {
         console.log(response.data)
