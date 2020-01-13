@@ -11,6 +11,11 @@ const GlobalStyle = styled.div`
     font-family: "Source Sans Pro";
     position: relative;
     min-height: 100vh;
+    letter-spacing: 0.15em;
+    color: #201c1e;
+  }
+  html,
+  body {
   }
 `
 
@@ -56,13 +61,12 @@ class ResponsiveContainer extends Component {
     }
 
     return (
-      <div>
-        <GlobalStyle>
-          <DesktopContainer {...containerProps}>{children}</DesktopContainer>
-          <MobileContainer {...containerProps}>{children}</MobileContainer>
-        </GlobalStyle>
+      <GlobalStyle>
+        <DesktopContainer {...containerProps}>{children}</DesktopContainer>
+        <MobileContainer {...containerProps}>{children}</MobileContainer>
+
         <Footer getWidth={containerProps.getWidth} />
-      </div>
+      </GlobalStyle>
     )
   }
 }

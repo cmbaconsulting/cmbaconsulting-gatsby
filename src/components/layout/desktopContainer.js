@@ -11,12 +11,12 @@ import styled from "styled-components"
 const StyledLogo = styled.img`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  width: ${props => (props.topPassed ? "260px" : "330px")};
+  width: ${props => (props.topPassed ? "250px" : "350px")};
   padding: 1.5% 0%;
 `
 
 const StyledMenu = styled(Menu)`
-  &&& a {
+  &&&&&&& a {
     padding-left: 20px;
     padding-right: 20px;
     margin-left: 30px;
@@ -33,8 +33,9 @@ const StyledMenu = styled(Menu)`
 `
 
 const Body = styled.div`
+  min-height: 100vh;
   margin-top: 4.5em;
-  padding-bottom: 8em;
+  padding-bottom: 4.5em;
   padding-top: 7.5em;
 `
 
@@ -55,7 +56,7 @@ const DesktopContainer = props => {
         }}
         offset={[60, 0]}
       >
-        <StyledMenu fixed="top" size="huge" borderless pointing>
+        <StyledMenu secondary={!topPassed} fixed="top" size="huge" borderless>
           <Container className="menuItems">
             <Menu.Header>
               <StyledLogo
@@ -79,6 +80,7 @@ const DesktopContainer = props => {
             ))}
           </Container>
         </StyledMenu>
+
         <Body>{children}</Body>
         {/*
         <Sidebar.Pushable

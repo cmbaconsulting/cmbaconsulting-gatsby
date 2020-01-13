@@ -5,7 +5,48 @@ import { Form, Segment, Header, Container, Transition } from "semantic-ui-react"
 import { navigate } from "@reach/router"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styled from "styled-components"
 
+const StyledSegment = styled(Segment)`
+  &&&& {
+    margin: 0em;
+
+    color: #084166;
+    text-align: center;
+  }
+`
+
+const StyledText = styled(Container)`
+   {
+    font-size: 1.25em;
+  }
+`
+
+const Underline = styled.div`
+  border-top: 3px dotted #799391;
+  width: 7em;
+  margin: 2em auto 2em auto;
+`
+const StyledHeader = styled(Container)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  letter-spacing: 0.3rem;
+
+  h2 {
+    font-size: 1.8em;
+  }
+`
+const StyledForm = styled(Form)`
+  &&& {
+    min-width: 300px;
+  }
+  &&&&& > * {
+    margin: 0em 0em 1.5em 0em;
+  }
+`
 export default () => {
   const [name, changeName] = useState("")
   const [email, changeEmail] = useState("")
@@ -61,29 +102,26 @@ export default () => {
       />
 
       <Container style={{ display: "flex", justifyContent: "center" }}>
-        <Segment
-          vertical
-          basic
-          style={{
-            width: "55em",
-          }}
-        >
+        <Segment vertical basic>
           <Transition
             mountOnShow={false}
             animation="fade up"
             duration={1500}
             transitionOnMount
           >
-            <Header
-              as="h1"
-              style={{
-                fontSize: "3.6em",
-                color: "#084166",
-                textAlign: "center",
-              }}
-            >
-              Contact Us
-            </Header>
+            <StyledSegment basic>
+              <Transition
+                mountOnShow={false}
+                transitionOnMount
+                animation="fade up"
+                duration={1000}
+              >
+                <StyledHeader text>
+                  <h2>Contact</h2>
+                  <Underline />
+                </StyledHeader>
+              </Transition>
+            </StyledSegment>
           </Transition>
           <Transition
             mountOnShow={false}
@@ -91,24 +129,18 @@ export default () => {
             animation="fade up"
             duration={1000}
           >
-            <Form
-              size="huge"
-              id="contact-form"
-              onSubmit={handleSubmit}
-              style={{ padding: "2em 1em 0em 1em" }}
-            >
+            <StyledForm size="large" id="contact-form" onSubmit={handleSubmit}>
               <Form.Input
                 type="text"
-                fluid
                 required
-                label="Name"
+                placeholder="Name"
                 id="name"
                 value={name}
                 onChange={e => changeName(e.target.value)}
               />
               <Form.Input
                 type="email"
-                label="Email address"
+                placeholder="Email address"
                 required
                 id="email"
                 value={email}
@@ -117,20 +149,22 @@ export default () => {
               <Form.TextArea
                 rows="5"
                 required
-                label="Message"
+                placeholder="Message"
                 id="message"
                 value={message}
                 onChange={e => changeMessage(e.target.value)}
               />
               <Form.Button
                 size="large"
+                style={{ width: "50%", margin: "0 auto" }}
+                fluid
                 primary
                 disabled={loading}
                 loading={loading}
               >
                 Submit
               </Form.Button>
-            </Form>
+            </StyledForm>
           </Transition>
         </Segment>
       </Container>

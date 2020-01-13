@@ -16,16 +16,16 @@ import styled from "styled-components"
 
 const StyledH1 = styled.h1`
   color: #084166;
-  font-size: 2.2em;
+  font-size: 1.8em;
 `
 const StyledH2 = styled.h2`
   color: #084166;
-  font-size: 1.6em;
+  font-size: 1.3em;
 `
 
 const StyledH3 = styled.h3`
   color: #084166;
-  font-size: 1.5em;
+  font-size: 1.35em;
 `
 
 const StyledDivider = styled(Divider)`
@@ -35,9 +35,9 @@ const StyledDivider = styled(Divider)`
 `
 
 const StyledParagraph = styled.p`
-  font-size: 1.2em;
   padding-bottom: 1em;
   font-family: "Source Sans Pro";
+  font-size: 1.15em;
 `
 
 const StyledGridContainer = styled(Container)`
@@ -72,7 +72,7 @@ export default () => {
               technology. We will ensure dexterity and scalability for future
               technological advances.
             </StyledParagraph>
-            <Button as={Link} to="/about" color="blue" size="large">
+            <Button as={Link} to="/about" color="blue" size="small">
               Read More
             </Button>
           </Container>
@@ -96,13 +96,7 @@ export default () => {
           >
             <Grid.Column>
               <StyledGridContainer>
-                <Icon
-                  inverted
-                  circular
-                  color="blue"
-                  name="dollar sign"
-                  size="large"
-                />
+                <Icon inverted circular color="blue" name="dollar sign" />
                 <StyledH3>Competitive Pricing</StyledH3>
                 <StyledParagraph>
                   With our direct sourcing capabilities, we're able to provide
@@ -112,7 +106,7 @@ export default () => {
             </Grid.Column>
             <Grid.Column>
               <StyledGridContainer>
-                <Icon inverted circular color="blue" name="list" size="large" />
+                <Icon inverted circular color="blue" name="list" />
                 <StyledH3>Great Selection</StyledH3>
                 <StyledParagraph>
                   With our expanded line of products, we're able to provide you
@@ -123,13 +117,7 @@ export default () => {
 
             <Grid.Column>
               <StyledGridContainer>
-                <Icon
-                  inverted
-                  circular
-                  color="blue"
-                  name="add user"
-                  size="large"
-                />
+                <Icon inverted circular color="blue" name="add user" />
                 <StyledH3>Expert Advice</StyledH3>
                 <StyledParagraph>
                   If you have a question, we'll get you the answer quick & easy.
