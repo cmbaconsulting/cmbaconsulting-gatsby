@@ -11,7 +11,7 @@ import styled from "styled-components"
 const StyledLogo = styled.img`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  width: ${props => (props.topPassed ? "250px" : "350px")};
+  width: ${props => (props.topPassed ? "250px" : "351px")};
   padding: 1.5% 0%;
 `
 
