@@ -67,14 +67,16 @@ const StyledContent = styled(Container)`
 `
 const StyledFormContainer = styled.div`
   &&&&&&& {
-    min-width: 500px;
+    max-width: 500px;
+    flex: 1 0 300px;
+    margin: 0 2.5em;
   }
 `
 const StyledListContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
-  min-width: 300px;
+  min-width: 250px;
   margin-top: 2.5em;
 `
 
