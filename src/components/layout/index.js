@@ -11,7 +11,7 @@ const GlobalStyle = styled.div`
     font-family: "Source Sans Pro";
     position: relative;
     min-height: 100vh;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.05em;
     color: #201c1e;
   }
   html,
