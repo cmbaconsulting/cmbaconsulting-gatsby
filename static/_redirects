@@ -1,6 +1,1 @@
-# Redirect domain aliases to primary domain
-https://www.cmbaconsulting.ca/* https://cmbaconsulting.ca/:splat 301!
-https://cmbaconsulting.ca/* https://cmbaconsulting.ca/:splat 301!
-
-# Optional: Redirect default Netlify subdomain to primary domain
 https://cmbaconsulting.netlify.com/* https://cmbaconsulting.ca/:splat 301!

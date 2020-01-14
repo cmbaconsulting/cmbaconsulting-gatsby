@@ -63,7 +63,7 @@ export default () => {
               <List.Item as="a" href="#" style={middleListStyle}>
                 Terms & Conditions
               </List.Item>
-              <List.Item as="a" href="#" style={bottomListStyle}>
+              <List.Item as="a" href="/privacy-policy" style={bottomListStyle}>
                 Privacy Policy
               </List.Item>
             </List>

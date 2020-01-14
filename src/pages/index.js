@@ -17,15 +17,18 @@ import styled from "styled-components"
 const StyledH1 = styled.h1`
   color: #084166;
   font-size: 1.8em;
+  letter-spacing: 0.05em;
 `
 const StyledH2 = styled.h2`
   color: #084166;
   font-size: 1.3em;
+  letter-spacing: 0.05em;
 `
 
 const StyledH3 = styled.h3`
   color: #084166;
   font-size: 1.35em;
+  letter-spacing: 0.05em;
 `
 
 const StyledDivider = styled(Divider)`

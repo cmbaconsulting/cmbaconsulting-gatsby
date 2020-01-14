@@ -71,7 +71,7 @@ export default props => {
                     <List.Item as="a" href="#">
                       Terms & Conditions
                     </List.Item>
-                    <List.Item as="a" href="#">
+                    <List.Item as={Link} to="/privacy-policy">
                       Privacy Policy
                     </List.Item>
                   </List>

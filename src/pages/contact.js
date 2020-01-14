@@ -1,7 +1,15 @@
 import React, { useState } from "react"
 import axios from "axios"
 import "semantic-ui-css/semantic.min.css"
-import { Form, Segment, Header, Container, Transition } from "semantic-ui-react"
+import {
+  Form,
+  Segment,
+  Header,
+  Container,
+  Transition,
+  List,
+  Icon,
+} from "semantic-ui-react"
 import { navigate } from "@reach/router"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -10,9 +18,8 @@ import styled from "styled-components"
 const StyledSegment = styled(Segment)`
   &&&& {
     margin: 0em;
-
-    color: #084166;
     text-align: center;
+    color: #084166;
   }
 `
 
@@ -22,31 +29,55 @@ const StyledText = styled(Container)`
   }
 `
 
-const Underline = styled.div`
-  border-top: 3px dotted #799391;
-  width: 7em;
-  margin: 2em auto 2em auto;
-`
 const StyledHeader = styled(Container)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  letter-spacing: 0.3rem;
-
+  letter-spacing: 0.1em;
+  margin-bottom: 2.5em;
   h2 {
-    font-size: 1.8em;
+    text-transform: uppercase;
+    font-size: 2em;
+    display: inline-block;
   }
 `
 const StyledForm = styled(Form)`
   &&& {
-    min-width: 300px;
   }
   &&&&& > * {
     margin: 0em 0em 1.5em 0em;
   }
 `
+
+const StyledList = styled(List)`
+  &&& {
+    color: #222533;
+    margin: 0;
+    min-width 100px;
+  }
+
+  &&&&& .item {
+    padding: 0.7em 0em;
+  }
+`
+const StyledContent = styled(Container)`
+  &&&&& {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+`
+const StyledFormContainer = styled.div`
+  &&&&&&& {
+    min-width: 500px;
+  }
+`
+const StyledListContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  min-width: 300px;
+  margin-top: 2.5em;
+`
+
 export default () => {
   const [name, changeName] = useState("")
   const [email, changeEmail] = useState("")
@@ -106,7 +137,7 @@ export default () => {
           <Transition
             mountOnShow={false}
             animation="fade up"
-            duration={1500}
+            duration={1000}
             transitionOnMount
           >
             <StyledSegment basic>
@@ -116,56 +147,101 @@ export default () => {
                 animation="fade up"
                 duration={1000}
               >
-                <StyledHeader text>
+                <StyledHeader>
                   <h2>Contact</h2>
-                  <Underline />
                 </StyledHeader>
               </Transition>
             </StyledSegment>
           </Transition>
-          <Transition
-            mountOnShow={false}
-            transitionOnMount
-            animation="fade up"
-            duration={1000}
-          >
-            <StyledForm size="large" id="contact-form" onSubmit={handleSubmit}>
-              <Form.Input
-                type="text"
-                required
-                placeholder="Name"
-                id="name"
-                value={name}
-                onChange={e => changeName(e.target.value)}
-              />
-              <Form.Input
-                type="email"
-                placeholder="Email address"
-                required
-                id="email"
-                value={email}
-                onChange={e => changeEmail(e.target.value)}
-              />
-              <Form.TextArea
-                rows="5"
-                required
-                placeholder="Message"
-                id="message"
-                value={message}
-                onChange={e => changeMessage(e.target.value)}
-              />
-              <Form.Button
-                size="large"
-                style={{ width: "50%", margin: "0 auto" }}
-                fluid
-                primary
-                disabled={loading}
-                loading={loading}
+
+          <StyledContent>
+            <StyledFormContainer>
+              <Transition
+                mountOnShow={false}
+                transitionOnMount
+                animation="fade up"
+                duration={1000}
               >
-                Submit
-              </Form.Button>
-            </StyledForm>
-          </Transition>
+                <StyledForm
+                  size="large"
+                  id="contact-form"
+                  onSubmit={handleSubmit}
+                >
+                  <Form.Input
+                    type="text"
+                    required
+                    placeholder="Name"
+                    id="name"
+                    value={name}
+                    onChange={e => changeName(e.target.value)}
+                  />
+                  <Form.Input
+                    type="email"
+                    placeholder="Email address"
+                    required
+                    id="email"
+                    value={email}
+                    onChange={e => changeEmail(e.target.value)}
+                  />
+                  <Form.TextArea
+                    rows="5"
+                    required
+                    placeholder="Message"
+                    id="message"
+                    value={message}
+                    onChange={e => changeMessage(e.target.value)}
+                  />
+                  <Form.Button
+                    size="large"
+                    style={{ width: "50%", margin: "0 auto" }}
+                    fluid
+                    primary
+                    disabled={loading}
+                    loading={loading}
+                  >
+                    Submit
+                  </Form.Button>
+                </StyledForm>
+              </Transition>
+            </StyledFormContainer>
+
+            <StyledListContainer>
+              <Transition
+                mountOnShow={false}
+                transitionOnMount
+                animation="fade up"
+                duration={1000}
+              >
+                <StyledList size="large">
+                  <List.Item>
+                    <Icon name="map pin" />
+                  </List.Item>
+
+                  <List.Item>
+                    <Icon name="phone" />
+                  </List.Item>
+
+                  <List.Item>
+                    <Icon name="envelope" />
+                  </List.Item>
+                </StyledList>
+              </Transition>
+              <Transition
+                mountOnShow={false}
+                transitionOnMount
+                animation="fade up"
+                duration={1000}
+              >
+                <StyledList size="large">
+                  <List.Item>Stittsville, Ontario</List.Item>
+
+                  <List.Item> (613) 663-4768</List.Item>
+
+                  <List.Item>chika@cmbaconsulting.ca</List.Item>
+                </StyledList>
+              </Transition>
+            </StyledListContainer>
+          </StyledContent>
         </Segment>
       </Container>
     </Layout>

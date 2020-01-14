@@ -9,7 +9,7 @@ const StyledSegment = styled(Segment)`
   &&&& {
     margin: 0em;
     color: #084166;
-    text-align: center;
+    text-align: left;
   }
 `
 
@@ -20,20 +20,17 @@ const StyledText = styled(Container)`
 `
 
 const Underline = styled.div`
-  border-top: 3px dotted #799391;
-  width: 40%;
-  margin: 2em auto 1em auto;
+  border-top: 2px solid #9eb63a;
+  margin: 0.3em auto 0em auto;
 `
 const StyledHeader = styled(Container)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1em;
 
   h2 {
+    text-transform: uppercase;
     font-size: 1.8em;
+    display: inline-block;
+    margin: 0;
   }
 `
 
@@ -46,14 +43,12 @@ const CenterContent = styled.div`
 
 const StyledP = styled.p`
    {
-    max-width: 90%;
     margin-bottom: 2em;
     color: #222533;
   }
 `
 const StyledP2 = styled.p`
    {
-    max-width: 90%;
     color: #222533;
     margin: initial;
   }
@@ -61,7 +56,6 @@ const StyledP2 = styled.p`
 const StyledList = styled(List)`
   &&& {
     color: #222533;
-    max-width: 80%;
   }
 
   &&&&& .item {
@@ -83,7 +77,7 @@ export default () => {
           animation="fade up"
           duration={1000}
         >
-          <StyledHeader text>
+          <StyledHeader>
             <h2>About the Company</h2>
             <Underline />
           </StyledHeader>
