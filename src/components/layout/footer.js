@@ -68,8 +68,8 @@ export default props => {
                     <List.Item as={Link} to="/contact">
                       Contact Us
                     </List.Item>
-                    <List.Item as="a" href="#">
-                      Terms & Conditions
+                    <List.Item as={Link} to="/terms">
+                      Terms of Service
                     </List.Item>
                     <List.Item as={Link} to="/privacy-policy">
                       Privacy Policy

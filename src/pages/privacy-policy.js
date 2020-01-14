@@ -9,7 +9,6 @@ const StyledSegment = styled(Segment)`
   &&&& {
     margin: 0em;
     color: #084166;
-    text-align: left;
   }
 `
 
@@ -21,7 +20,7 @@ const StyledText = styled(Container)`
 `
 
 const Underline = styled.div`
-  border-top: 2px solid #9eb63a;
+  border-top: 2px solid #728087;
   width: 100%;
   margin: 0em auto 0 auto;
 `
