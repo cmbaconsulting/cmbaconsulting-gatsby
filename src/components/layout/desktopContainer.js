@@ -11,8 +11,9 @@ import styled from "styled-components"
 const StyledLogo = styled.img`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  width: ${props => (props.topPassed ? "250px" : "351px")};
+  width: ${props => (props.topPassed ? "250px" : "340px")};
   padding: 1.5% 0%;
+  margin: 0.7em 0em;
 `
 
 const StyledMenu = styled(Menu)`
@@ -37,6 +38,9 @@ const Body = styled.div`
   margin-top: 4.5em;
   padding-bottom: 4.5em;
   padding-top: 7.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 `
 
 const DesktopContainer = props => {

@@ -34,15 +34,22 @@ const StyledHeader = styled(Container)`
   margin-bottom: 2.5em;
   h2 {
     text-transform: uppercase;
-    font-size: 2em;
+    font-size: 2.5em;
     display: inline-block;
   }
 `
+const Underline = styled.div`
+  border-top: 2px solid #728087;
+  margin: 0.3em auto 0em auto;
+`
+
 const StyledForm = styled(Form)`
   &&& {
   }
-  &&&&& > * {
+  &&&&& > .input {
     margin: 0em 0em 1.5em 0em;
+    border: 1px solid #728087;
+    border-radius: 4px;
   }
 `
 
@@ -151,6 +158,7 @@ export default () => {
               >
                 <StyledHeader>
                   <h2>Contact</h2>
+                  <Underline />
                 </StyledHeader>
               </Transition>
             </StyledSegment>
@@ -170,6 +178,7 @@ export default () => {
                   onSubmit={handleSubmit}
                 >
                   <Form.Input
+                    className="input"
                     type="text"
                     required
                     placeholder="Name"
@@ -178,6 +187,7 @@ export default () => {
                     onChange={e => changeName(e.target.value)}
                   />
                   <Form.Input
+                    className="input"
                     type="email"
                     placeholder="Email address"
                     required
@@ -186,6 +196,7 @@ export default () => {
                     onChange={e => changeEmail(e.target.value)}
                   />
                   <Form.TextArea
+                    className="input"
                     rows="5"
                     required
                     placeholder="Message"

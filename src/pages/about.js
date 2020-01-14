@@ -28,7 +28,7 @@ const StyledHeader = styled(Container)`
 
   h2 {
     text-transform: uppercase;
-    font-size: 1.8em;
+    font-size: 2em;
     display: inline-block;
     margin: 0;
   }
@@ -69,73 +69,74 @@ export default () => {
   return (
     <Layout>
       <SEO title="About" url="/about" description="About the Company" />
+      <div>
+        <StyledSegment basic>
+          <Transition
+            mountOnShow={false}
+            transitionOnMount
+            animation="fade up"
+            duration={1000}
+          >
+            <StyledHeader>
+              <h2>About the Company</h2>
+              <Underline />
+            </StyledHeader>
+          </Transition>
+        </StyledSegment>
 
-      <StyledSegment basic>
         <Transition
           mountOnShow={false}
           transitionOnMount
           animation="fade up"
           duration={1000}
         >
-          <StyledHeader>
-            <h2>About the Company</h2>
-            <Underline />
-          </StyledHeader>
-        </Transition>
-      </StyledSegment>
+          <Segment vertical basic padded>
+            <StyledText>
+              <CenterContent>
+                <StyledP>
+                  <StyledBold>Chika Mba Consulting Inc.</StyledBold> is an IT
+                  consulting company that was originally established as a sole
+                  proprietorship in 2005 and incorporation in 2018. The
+                  information technology needs of our Customers are top
+                  priority. Our main objective is to service our clients with
+                  the best products and services that are available. Our team
+                  works closely with you providing cost analysis, cost effective
+                  and dependable solutions to meet your technology fulfillment
+                  and infrastructure related requirements.
+                </StyledP>
+                <StyledP2>
+                  <StyledBold>
+                    Chika Mba Consulting Inc. offers the following:
+                  </StyledBold>
+                </StyledP2>
+                <StyledList bulleted divided>
+                  <List.Item>IT expertise for consumers</List.Item>
 
-      <Transition
-        mountOnShow={false}
-        transitionOnMount
-        animation="fade up"
-        duration={1000}
-      >
-        <Segment vertical basic padded>
-          <StyledText>
-            <CenterContent>
-              <StyledP>
-                <StyledBold>Chika Mba Consulting Inc.</StyledBold> is an IT
-                consulting company that was originally established as a sole
-                proprietorship in 2005 and incorporation in 2018. The
-                information technology needs of our Customers are top priority.
-                Our main objective is to service our clients with the best
-                products and services that are available. Our team works closely
-                with you providing cost analysis, cost effective and dependable
-                solutions to meet your technology fulfillment and infrastructure
-                related requirements.
-              </StyledP>
-              <StyledP2>
-                <StyledBold>
-                  Chika Mba Consulting Inc. offers the following:
-                </StyledBold>
-              </StyledP2>
-              <StyledList bulleted divided>
-                <List.Item>IT expertise for consumers</List.Item>
+                  <List.Item>
+                    IT Scripting, revising, analyzing and supporting software to
+                    meet specific requirements
+                  </List.Item>
 
-                <List.Item>
-                  IT Scripting, revising, analyzing and supporting software to
-                  meet specific requirements
-                </List.Item>
+                  <List.Item>
+                    Planning, design and integration of computer or network
+                    systems
+                  </List.Item>
 
-                <List.Item>
-                  Planning, design and integration of computer or network
-                  systems
-                </List.Item>
+                  <List.Item>On-site and remote IT management</List.Item>
 
-                <List.Item>On-site and remote IT management.</List.Item>
+                  <List.Item>
+                    IT systems design, development, and integration
+                  </List.Item>
 
-                <List.Item>
-                  IT systems design, development, and integratio
-                </List.Item>
+                  <List.Item>IT application design and development</List.Item>
 
-                <List.Item>IT application design and development</List.Item>
+                  <List.Item>IT professional support services</List.Item>
+                  <List.Item>IT application design and development</List.Item>
+                  <List.Item>IT professional services</List.Item>
+                  <List.Item>IT consulting services</List.Item>
+                  <List.Item>IT project management</List.Item>
 
-                <List.Item>IT professional support services</List.Item>
-                <List.Item>IT application design and development</List.Item>
-                <List.Item>IT professional services</List.Item>
-                <List.Item>IT consulting services</List.Item>
-
-                {/* <List.Item>
+                  {/* <List.Item>
                   We have been in business since 2005. We are bonded and
                   insured.
                 </List.Item>
@@ -167,11 +168,12 @@ export default () => {
                   We also offer Cyber Security, Scalability Assessments, IT
                   Compliance, Integration Services, and Assessment & Planning.
                 </List.Item> */}
-              </StyledList>
-            </CenterContent>
-          </StyledText>
-        </Segment>
-      </Transition>
+                </StyledList>
+              </CenterContent>
+            </StyledText>
+          </Segment>
+        </Transition>
+      </div>
     </Layout>
   )
 }

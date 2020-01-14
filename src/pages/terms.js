@@ -70,7 +70,7 @@ const StyledList = styled.ul`
 export default () => {
   return (
     <Layout>
-      <SEO title="Privacy Policy" url="/privacy-policy" />
+      <SEO title="Terms of Service" url="/terms" />
 
       <StyledSegment basic>
         <Transition
