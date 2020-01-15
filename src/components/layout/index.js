@@ -4,7 +4,7 @@ import DesktopContainer from "./desktopContainer"
 import MobileContainer from "./mobileContainer"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import Footer from "./footer"
+import Footer from "./desktopFooter"
 
 const GlobalStyle = styled.div`
   &&&&& {

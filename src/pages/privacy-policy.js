@@ -71,7 +71,7 @@ export default () => {
           animation="fade up"
           duration={1000}
         >
-          <StyledH2>
+          <StyledH2 className="page-header">
             <h2>Privacy Policy</h2>
             <Underline />
           </StyledH2>

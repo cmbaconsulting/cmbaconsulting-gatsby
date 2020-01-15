@@ -41,13 +41,17 @@ export default () => {
 
           <Grid.Column>
             <List inverted size="large">
-              <List.Item as="a" href="mailto:chika@cmbaconsulting.ca">
+              <List.Item
+                as="a"
+                href="mailto:chika@cmbaconsulting.ca"
+                style={topListStyle}
+              >
                 chika@cmbaconsulting.ca
               </List.Item>
-              <List.Item>
+              <List.Item style={middleListStyle}>
                 314 Mykonos Crescent, Stittsville, Ontario, K2S0P1
               </List.Item>
-              <List.Item as="a" href="tel:613-663-4768">
+              <List.Item as="a" href="tel:613-663-4768" style={bottomListStyle}>
                 (613) 663-4768
               </List.Item>
             </List>
@@ -60,10 +64,10 @@ export default () => {
               <List.Item as={Link} to="/contact" style={middleListStyle}>
                 Contact Us
               </List.Item>
-              <List.Item as="a" href="#" style={middleListStyle}>
-                Terms & Conditions
+              <List.Item as={Link} to="/terms" style={middleListStyle}>
+                Terms of Service
               </List.Item>
-              <List.Item as="a" href="/privacy-policy" style={bottomListStyle}>
+              <List.Item as={Link} to="/privacy-policy" style={bottomListStyle}>
                 Privacy Policy
               </List.Item>
             </List>

@@ -14,7 +14,15 @@ import _ from "lodash"
 import { navigate } from "@reach/router"
 import logo from "../../images/logo.png"
 import Footer from "./mobileFooter"
+import styled from "styled-components"
 
+const Body = styled.div`
+  padding-bottom: 3em;
+  padding-top: 4em;
+  .page-header {
+    text-align: center;
+  }
+`
 const DesktopContainer = props => {
   const [fixed, showFixedMenu] = useState(false)
 
@@ -96,9 +104,7 @@ const DesktopContainer = props => {
             />
           ))}
         </Sidebar> */}
-        <Sidebar.Pusher style={{ paddingBottom: "3em", paddingTop: "4em" }}>
-          {children}
-        </Sidebar.Pusher>
+        <Body>{children}</Body>
       </Sidebar.Pushable>
       <Footer />
     </Responsive>

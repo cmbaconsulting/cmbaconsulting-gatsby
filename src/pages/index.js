@@ -13,7 +13,21 @@ import {
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
+import Ingram from "../images/ingram.png"
+import TechData from "../images/techdata.png"
+import Sophos from "../images/sophos.png"
+import Lenovo from "../images/lenovo.png"
+import Microsoft from "../images/microsoft.png"
+import EvoluTEL from "../images/evolutel.png"
 
+const partners = {
+  "Ingram Micro": Ingram,
+  TechData: TechData,
+  Sophos: Sophos,
+  Lenovo: Lenovo,
+  Microsoft: Microsoft,
+  EvoluTEL: EvoluTEL,
+}
 const StyledH1 = styled.h1`
   color: #084166;
   font-size: 1.8em;
@@ -33,7 +47,7 @@ const StyledH3 = styled.h3`
 
 const StyledDivider = styled(Divider)`
   &&& {
-    padding-top: 3em;
+    padding-top: 2em;
   }
 `
 
@@ -87,7 +101,7 @@ export default () => {
         animation="fade up"
         duration={1000}
       >
-        <Segment textAlign="center" vertical>
+        <Segment textAlign="center" vertical basic>
           <StyledDivider className="header" horizontal>
             <StyledH2>Why Choose Us?</StyledH2>
           </StyledDivider>
@@ -129,6 +143,52 @@ export default () => {
               </StyledGridContainer>
             </Grid.Column>
           </Grid>
+        </Segment>
+      </Transition>
+      <Transition
+        mountOnShow={false}
+        transitionOnMount
+        animation="fade up"
+        duration={1000}
+      >
+        <Segment textAlign="center" vertical basic>
+          <StyledDivider className="header" horizontal>
+            <StyledH2>Partners</StyledH2>
+          </StyledDivider>
+          <Container>
+            <Grid columns="3" columns="equal" stackable verticalAlign="middle">
+              <Grid.Row>
+                {Object.keys(partners)
+                  .slice(0, 3)
+                  .map(partner => (
+                    <Grid.Column key={partner}>
+                      <StyledGridContainer>
+                        <img
+                          width="250"
+                          src={partners[partner]}
+                          alt={partner}
+                        />
+                      </StyledGridContainer>
+                    </Grid.Column>
+                  ))}
+              </Grid.Row>
+              <Grid.Row>
+                {Object.keys(partners)
+                  .slice(3, 6)
+                  .map(partner => (
+                    <Grid.Column key={partner}>
+                      <StyledGridContainer>
+                        <img
+                          width="250"
+                          src={partners[partner]}
+                          alt={partner}
+                        />
+                      </StyledGridContainer>
+                    </Grid.Column>
+                  ))}
+              </Grid.Row>
+            </Grid>
+          </Container>
         </Segment>
       </Transition>
     </Layout>

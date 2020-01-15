@@ -34,7 +34,7 @@ const StyledMenu = styled(Menu)`
 `
 
 const Body = styled.div`
-  min-height: 100vh;
+  min-height: 95vh;
   margin-top: 4.5em;
   padding-bottom: 4.5em;
   padding-top: 7.5em;

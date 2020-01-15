@@ -9,7 +9,6 @@ const StyledSegment = styled(Segment)`
   &&&& {
     margin: 0em;
     color: #084166;
-    text-align: left;
   }
 `
 
@@ -77,7 +76,7 @@ export default () => {
             animation="fade up"
             duration={1000}
           >
-            <StyledHeader>
+            <StyledHeader className="page-header">
               <h2>About the Company</h2>
               <Underline />
             </StyledHeader>
