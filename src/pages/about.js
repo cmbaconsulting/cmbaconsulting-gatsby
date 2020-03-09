@@ -135,6 +135,7 @@ export default () => {
                   <List.Item>IT consulting services</List.Item>
                   <List.Item>IT project management</List.Item>
                   <List.Item>IT hardware and software sales</List.Item>
+                  <List.Item>IT cloud and virtualization solutions</List.Item>
                   {/* <List.Item>
                   We have been in business since 2005. We are bonded and
                   insured.
