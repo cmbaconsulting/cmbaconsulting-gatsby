@@ -110,12 +110,8 @@ export default () => {
                 </StyledP2>
                 <StyledList bulleted divided>
                   <List.Item>IT expertise for consumers</List.Item>
-
-                  <List.Item>
-                    IT Scripting, revising, analyzing and supporting software to
-                    meet specific requirements
-                  </List.Item>
-
+                  <List.Item>IT Scripting, revising, analyzing and supporting software to
+                    meet specific requirements</List.Item>
                   <List.Item>
                     Planning, design and integration of computer or network
                     systems
@@ -128,45 +124,11 @@ export default () => {
                   </List.Item>
 
                   <List.Item>IT application design and development</List.Item>
-
-                  <List.Item>IT professional support services</List.Item>
-                  <List.Item>IT application design and development</List.Item>
                   <List.Item>IT professional services</List.Item>
                   <List.Item>IT consulting services</List.Item>
                   <List.Item>IT project management</List.Item>
                   <List.Item>IT hardware and software sales</List.Item>
-                  {/* <List.Item>
-                  We have been in business since 2005. We are bonded and
-                  insured.
-                </List.Item>
-
-                <List.Item>
-                  We specialize in IT healthcare technologies (for medical
-                  clinics and hospitals), and IT professional services for
-                  businesses.
-                </List.Item>
-
-                <List.Item>
-                  We supply all types of hardware and software solutions for an
-                  infrastructure.
-                </List.Item>
-
-                <List.Item>
-                  We provide technical services and consulting for a network
-                  infrastructure, servers, workstations, laptops, tablets,
-                  mobile devices, database support, disaster recovery planning,
-                  system migrations, network cabling and so much more.
-                </List.Item>
-
-                <List.Item>
-                  We offer project management, IT consulting and IT professional
-                  services for short or long-term projects.
-                </List.Item>
-
-                <List.Item>
-                  We also offer Cyber Security, Scalability Assessments, IT
-                  Compliance, Integration Services, and Assessment & Planning.
-                </List.Item> */}
+                  
                 </StyledList>
               </CenterContent>
             </StyledText>
