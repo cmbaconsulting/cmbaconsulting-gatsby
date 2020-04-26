@@ -3,7 +3,7 @@
   "private": true,
   "description": "Chika Mba Consulting Inc",
   "version": "0.1.0",
-  "author": "Alex Teshome",
+  "author": "Chika Mba Consulting Inc",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.18.21",
