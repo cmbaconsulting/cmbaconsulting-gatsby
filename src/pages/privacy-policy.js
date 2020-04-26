@@ -182,7 +182,7 @@ export default () => {
                 https://www.cmbaconsulting.ca
               </a>
               <br />
-              314 Mykonos Crescent, Stittsville, Ontario, K2S0P1 <br /> (613)
+              Stittsville, Ontario, K2S0P1 <br /> (613)
               663-4768
             </StyledText>
           </CenterContent>
